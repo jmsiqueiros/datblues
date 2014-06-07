@@ -7,5 +7,6 @@ for bluesman in bluesmen:
     response = urllib2.urlopen('http://en.wikipedia.org/w/api.php?format=json&action=query&titles='+bluesman+'&prop=revisions&rvprop=content')
     html = response.read()
 
+    print "bajando %s" % bluesman
     with open( bluesman+'.json', 'w') as f:
-        f.write( "Get all data: ", html)
+        f.write( html)
