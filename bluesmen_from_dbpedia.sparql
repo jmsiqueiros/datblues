@@ -1,0 +1,13 @@
+PREFIX db: <http://dbpedia.org/ontology/>
+SELECT ?bluesman ?acts ?band ?birthDate ?birthPlace ?yearsActive ?instrument ?foto WHERE {
+?bluesman rdf:type <http://dbpedia.org/ontology/MusicalArtist>.
+?bluesman dbpedia2:genre <http://dbpedia.org/resource/Blues>.
+?bluesman dbpedia2:associatedActs ?acts.
+?bluesman db:associatedBand ?band.
+?bluesman dbpedia2:birthDate ?birthDate.
+?bluesman dbpedia2:birthPlace ?birthPlace.
+?bluesman dbpedia2:yearsActive ?yearsActive.
+?bluesman dbpedia2:instrument ?instrument.
+?bluesman foaf:depiction ?foto.
+} 
+LIMIT 150
